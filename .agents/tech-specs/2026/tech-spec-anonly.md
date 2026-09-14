@@ -8,32 +8,6 @@
 
 ---
 
-## 1. Arsitektur Sistem & Direktori Proyek (Nuxt 4)
-
-Proyek menggunakan struktur standar Nuxt 4 dengan TypeScript:
-
-```
-anonly/
-├── app/
-│   ├── pages/
-│   │   ├── index.vue              # Landing page
-│   │   ├── login.vue              # Login & Register (Firebase Auth)
-│   │   ├── dashboard.vue          # Inbox & manajemen pesan
-│   │   └── u/
-│   │       └── [username].vue     # Halaman publik pengirim pesan
-│   ├── components/                # UI components (Tailwind CSS / Nuxt UI)
-│   └── composables/               # Firebase composables (useAuth, useFirestore)
-├── server/
-│   └── api/                       # Nitro server routes (alternatif / pendukung Cloud Functions)
-├── functions/                     # Firebase Cloud Functions (Node.js / TypeScript)
-│   └── src/
-│       └── index.ts               # validateAndSubmitMessage endpoint
-├── nuxt.config.ts
-└── package.json
-```
-
----
-
 ## 2. Skema Database Firestore
 
 ### 2.1 Koleksi `users`
